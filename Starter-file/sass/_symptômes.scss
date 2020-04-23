@@ -1,0 +1,12 @@
+.container2 {
+    text-align: center;
+    h2 {
+        color: $mainColor;
+    }
+    &__imggrid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-evenly;
+        margin: 40px auto;
+    }
+}

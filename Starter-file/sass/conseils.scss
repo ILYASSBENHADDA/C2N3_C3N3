@@ -1,0 +1,39 @@
+@import "main-mod";
+
+@import "header";
+
+@import "infobar";
+
+.secpro {
+    text-align: center;
+    margin: 30px auto;
+    h2 {
+        color: $mainColor;
+    }
+    &__imggrid {
+        display: grid;
+        grid-template-columns: repeat(3, 260px);
+        grid-row-gap: 30px;
+        grid-column-gap: 50px;
+        margin:40px auto;
+        justify-content: center;
+    }
+    .house {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .secpro {
+        &__imggrid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:0;
+        }
+    }
+}
+
+@import "symptômes";
+
+@import "recom&test";
+
+@import "footer";
