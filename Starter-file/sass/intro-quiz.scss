@@ -1,0 +1,40 @@
+@import "main-mod";
+
+@import "header";
+
+@import "line-headquiz-01";
+
+
+// Introduction 
+
+.intro {
+    background: #7db7d5;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 30px;
+    margin: 60px;
+    h1 {
+        color: $mainColor;
+    }
+    &__line {
+        text-align: center;
+        
+        img {
+            height: 4px;
+            width: 170px;
+        }
+    }
+
+}
+
+.btn {
+    @import "btn";
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+@import "recom&test";
+
+@import "footer";
