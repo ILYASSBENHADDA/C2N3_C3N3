@@ -239,224 +239,224 @@ Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus,
 ];
 
 
-// const lancer = document.querySelector("#btn_1");
-// const preamble = document.querySelector("#preambule");
-// const quest = document.querySelector("#question_1");
-// const quest1 = document.querySelector(".question_1");
-// const pointQuestionnaire = document.querySelector(".questionnaire");
-// const pointInfo = document.querySelector(".informations");
-// const pointResult = document.querySelector(".resu");
-// const questionText = document.querySelector('.questions__text');
-// const suivant = document.querySelector('.btn_next');
-// const precedente = document.querySelector('.btn-return');
-// const form = document.querySelector('.questions__form');
-// const conseil = document.querySelector('.consei');
-// const progressBar = document.querySelector('.progressBar');
-// const resultat = document.querySelector('.resultt')
-// const textResult = document.querySelector('.afficheResult')
-// const restart = document.querySelector('.btnRestart')
+const lancer = document.querySelector("#btn_1");
+const preamble = document.querySelector("#preambule");
+const quest = document.querySelector("#question_1");
+const quest1 = document.querySelector(".question_1");
+const pointQuestionnaire = document.querySelector(".questionnaire");
+const pointInfo = document.querySelector(".informations");
+const pointResult = document.querySelector(".resu");
+const questionText = document.querySelector('.questions__text');
+const suivant = document.querySelector('.btn_next');
+const precedente = document.querySelector('.btn-return');
+const form = document.querySelector('.questions__form');
+const conseil = document.querySelector('.consei');
+const progressBar = document.querySelector('.progressBar');
+const resultat = document.querySelector('.resultt')
+const textResult = document.querySelector('.afficheResult')
+const restart = document.querySelector('.btnRestart')
 
-// let counter = 0;
-// let arr2 = [];
+let counter = 0;
+let arr2 = [];
 
-// lancer.addEventListener("click", function () {
-// pointInfo.classList.add('hide');
-// pointQuestionnaire.classList.remove('hide');
-// preamble.style.display = "none";
-// quest1.style.display = "block";
-// quest.style.display = "block";
-// progressBar.style.display = "block";
+lancer.addEventListener("click", function () {
+pointInfo.classList.add('hide');
+pointQuestionnaire.classList.remove('hide');
+preamble.style.display = "none";
+quest1.style.display = "block";
+quest.style.display = "block";
+progressBar.style.display = "block";
 
-// counter += 1;
-// changeTextQuest(counter);
-// proBar(counter);
-// console.log(counter);
-// console.log(form);
-// });
-// restart.addEventListener('click', () => {
-// arr2 = [];
-// pointResult.style.display = 'none';
-// pointQuestionnaire.style.display = 'block';
-// resultat.style.display = 'none';
-// quest.style.display = 'block';
-// progressBar.style.display = 'block';
-// suivant.firstElementChild.textContent = 'question suivant';
-// counter = 1;
-// changeTextQuest(counter);
-// proBar(counter);
+counter += 1;
+changeTextQuest(counter);
+proBar(counter);
+console.log(counter);
+console.log(form);
+});
+restart.addEventListener('click', () => {
+arr2 = [];
+pointResult.style.display = 'none';
+pointQuestionnaire.style.display = 'block';
+resultat.style.display = 'none';
+quest.style.display = 'block';
+progressBar.style.display = 'block';
+suivant.firstElementChild.textContent = 'question suivant';
+counter = 1;
+changeTextQuest(counter);
+proBar(counter);
 
-// });
+});
 
-// function changeTextQuest(compteur) {
-// let currentQuestion = questionsList.find((ques) => {
-//     return ques.number == compteur;
-// });
+function changeTextQuest(compteur) {
+let currentQuestion = questionsList.find((ques) => {
+    return ques.number == compteur;
+});
 
-// questionText.textContent = currentQuestion.text;
-// form.innerHTML = currentQuestion.choices;
-// }
+questionText.textContent = currentQuestion.text;
+form.innerHTML = currentQuestion.choices;
+}
 
-// suivant.addEventListener('click', () => {
-// conseil.style.display = "none";
-// let details = document.querySelector('#numerique');
-// if (form.children[0].id === 'numerique') {
+suivant.addEventListener('click', () => {
+conseil.style.display = "none";
+let details = document.querySelector('#numerique');
+if (form.children[0].id === 'numerique') {
 
-//     if (details.value === "") {
-//         alert("Enter valid number")
-//         return;
-//     } else if (counter == 2 && (details.value < 34 || details.value > 41)) {
-//         alert('Entrer your temperature');
-//         return;
-//     } else if (counter === 12 && (details.value > 110)) {
-//         alert("l'age doit etre inferieure a 110");
-//         return;
-//     } else if (counter === 13 && (details.value < 100 || details.value > 200)) {
-//         alert('Enter taille entre 100 et 200');
-//         return;
-//     } else if (counter === 14 && (details.value < 40 || details.value > 200)) {
-//         alert('Poids etre 40 et 200');
-//         return;
-//     } else {
-//         arr2.push(details.value);
-//         console.log(details.value);
-//         counter += 1;
-//     }
-// } else if (questionsList[counter - 1].type === 1) {
-//     var valeur = document.querySelector('input[name=choice]:checked').value;
-//     if (valeur === 'non' && counter === 1) {
-//         arr2.push(valeur);
-//         arr2.push('37');
-//         counter += 2;
-//     } else {
-//         arr2.push(valeur);
-//         counter += 1;
-//     }
+    if (details.value === "") {
+        alert("Enter valid number")
+        return;
+    } else if (counter == 2 && (details.value < 34 || details.value > 41)) {
+        alert('Entrer your temperature');
+        return;
+    } else if (counter === 12 && (details.value > 110)) {
+        alert("l'age doit etre inferieure a 110");
+        return;
+    } else if (counter === 13 && (details.value < 100 || details.value > 200)) {
+        alert('Enter taille entre 100 et 200');
+        return;
+    } else if (counter === 14 && (details.value < 40 || details.value > 200)) {
+        alert('Poids etre 40 et 200');
+        return;
+    } else {
+        arr2.push(details.value);
+        console.log(details.value);
+        counter += 1;
+    }
+} else if (questionsList[counter - 1].type === 1) {
+    var valeur = document.querySelector('input[name=choice]:checked').value;
+    if (valeur === 'non' && counter === 1) {
+        arr2.push(valeur);
+        arr2.push('37');
+        counter += 2;
+    } else {
+        arr2.push(valeur);
+        counter += 1;
+    }
 
-// };
-// console.log(arr2);
-
-
-// if (counter > 1) {
-//     precedente.style.display = "block";
-// }
-// if (counter === 23) {
-//     suivant.firstElementChild.textContent = 'Afficher resultat';
-// }
-// if (counter === 13 && (arr2[11] < 15)) {
-//     pointQuestionnaire.style.display = "none";
-//     pointResult.classList.remove('hide');
-//     quest.style.display = "none";
-//     resultat.style.display = "block";
-//     progressBar.style.display = "none"
-
-//     textResult.firstElementChild.textContent =
-//         'Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15';
-// }
-// if (counter === 24) {
-//     pointQuestionnaire.style.display = "none";
-//     pointResult.classList.remove('hide');
-//     quest.style.display = "none";
-//     resultat.style.display = "block";
-//     progressBar.style.display = "none"
-//     triereponces();
-//     showResult()
-// }
+};
+console.log(arr2);
 
 
-// changeTextQuest(counter);
-// proBar(counter);
-// console.log(form);
-// });
+if (counter > 1) {
+    precedente.style.display = "block";
+}
+if (counter === 23) {
+    suivant.firstElementChild.textContent = 'Afficher resultat';
+}
+if (counter === 13 && (arr2[11] < 15)) {
+    pointQuestionnaire.style.display = "none";
+    pointResult.classList.remove('hide');
+    quest.style.display = "none";
+    resultat.style.display = "block";
+    progressBar.style.display = "none"
 
-// precedente.addEventListener('click', () => {
-// if (counter == 1) {
-//     precedente.style.display = "none";
-// }
-// if (counter <= 23) {
-//     suivant.firstElementChild.textContent = 'question suivant';
-// }
-
-// if (counter === 3 && arr2[0] === 'non') {
-//     counter -= 1;
-//     arr2.pop();
-//     precedente.style.display = "none";
-// }
-
-// counter -= 1;
-
-// arr2.pop();
-// console.log(arr2)
-// changeTextQuest(counter);
-// proBar(counter);
-// });
-// const progression = document.querySelector('.progress')
-// const questNumber = document.querySelector('.prognum')
-
-// function proBar(pourcent) {
-// progression.style.width = `${ 100 / 23 * pourcent}%`;
-// questNumber.textContent = `${pourcent}/23`
-// }
+    textResult.firstElementChild.textContent =
+        'Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15';
+}
+if (counter === 24) {
+    pointQuestionnaire.style.display = "none";
+    pointResult.classList.remove('hide');
+    quest.style.display = "none";
+    resultat.style.display = "block";
+    progressBar.style.display = "none"
+    triereponces();
+    showResult()
+}
 
 
-// /*************/
-// let tabSymptome = [];
-// let tabPronostique = [];
-// let tabMajeur = [];
-// let tabMineur = [];
+changeTextQuest(counter);
+proBar(counter);
+console.log(form);
+});
 
-// let nombSypmtome = 0;
-// let nombPronos = 0;
-// let nombMin = 0;
-// let nombMaj = 0;
-// /*************/
+precedente.addEventListener('click', () => {
+if (counter == 1) {
+    precedente.style.display = "none";
+}
+if (counter <= 23) {
+    suivant.firstElementChild.textContent = 'question suivant';
+}
 
-// triereponces = () => {
-// for (let i = 0; i < arr2.length; i++) {
+if (counter === 3 && arr2[0] === 'non') {
+    counter -= 1;
+    arr2.pop();
+    precedente.style.display = "none";
+}
 
-//     if ((i == 11) || (i >= 14 && i <= 22)) {
-//         tabPronostique.push(arr2[i])
-//     }
-//     if ((i == 1) || (i == 7) || (i == 10)) {
-//         tabMineur.push(arr2[i])
-//     }
-//     if ((i == 1) || (i == 8) || (i == 9)) {
-//         tabMajeur.push(arr2[i])
-//     }
-// }
+counter -= 1;
 
-// for (let i = 0; i < tabPronostique.length; i++) {
-//     if ((tabPronostique[i] == 'oui') || (tabPronostique[i] >= 70)) {
-//         nombPronos++;
-//     }
-// }
-// for (let i = 0; i < tabMineur.length; i++) {
-//     if ((tabMineur[i] >= 39) || (tabMineur[i] >= 'oui') || (tabMineur[i] == 'Fatigué') || (tabMineur[i] == 'Trop fatigué')) {
-//         nombMin++;
-//     }
-// }
-// for (let i = 0; i < tabMajeur.length; i++) {
-//     if ((tabMajeur[i] <= 35.4) || (tabMajeur[i] == 'oui')) {
-//         nombMaj++;
-//     }
-// }
-// showResult();
-// }
+arr2.pop();
+console.log(arr2)
+changeTextQuest(counter);
+proBar(counter);
+});
+const progression = document.querySelector('.progress')
+const questNumber = document.querySelector('.prognum')
 
-// function showResult() {
-// if (arr2[0] === 'oui' || (arr2[2] == 'oui' && arr2[4] == 'oui') || (arr2[2] == 'oui' && arr2[3] == 'oui')) {
+function proBar(pourcent) {
+progression.style.width = `${ 100 / 23 * pourcent}%`;
+questNumber.textContent = `${pourcent}/23`
+}
 
-//     if ((nombMaj >= 1) || ((nombPronos >= 1) && (nombMin >= 2))) {
-//         textResult.firstElementChild.textContent = 'veuillez appeler le numéro 141';
-//     } else if (((nombPronos >= 1) && (nombMaj == 0)) || (nombMin == 1)) {
-//         textResult.firstElementChild.textContent = 'téléconsultation ou médecin généraliste ou visite à domicile1';
-//     } else if ((nombPronos == 0) && (nombMaj == 0) && (nombMin == 0) && arr2[11] > 50) {
-//         textResult.firstElementChild.textContent = 'téléconsultation ou médecin généraliste ou visite à domicile2';
-//     } else if ((nombPronos == 0) && (nombMaj == 0) && (nombMin == 0) && arr2[11] < 50) {
-//         textResult.firstElementChild.textContent = 'nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes.';
-//     } else if ((arr2[11] <= 50) && (nombMin >= 1)) {
-//         textResult.firstElementChild.textContent = 'nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes';
-//     } 
-// }else {
-//     textResult.firstElementChild.textContent = 'Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil.';
-// }
-// } 
+
+/*************/
+let tabSymptome = [];
+let tabPronostique = [];
+let tabMajeur = [];
+let tabMineur = [];
+
+let nombSypmtome = 0;
+let nombPronos = 0;
+let nombMin = 0;
+let nombMaj = 0;
+/*************/
+
+triereponces = () => {
+for (let i = 0; i < arr2.length; i++) {
+
+    if ((i == 11) || (i >= 14 && i <= 22)) {
+        tabPronostique.push(arr2[i])
+    }
+    if ((i == 1) || (i == 7) || (i == 10)) {
+        tabMineur.push(arr2[i])
+    }
+    if ((i == 1) || (i == 8) || (i == 9)) {
+        tabMajeur.push(arr2[i])
+    }
+}
+
+for (let i = 0; i < tabPronostique.length; i++) {
+    if ((tabPronostique[i] == 'oui') || (tabPronostique[i] >= 70)) {
+        nombPronos++;
+    }
+}
+for (let i = 0; i < tabMineur.length; i++) {
+    if ((tabMineur[i] >= 39) || (tabMineur[i] >= 'oui') || (tabMineur[i] == 'Fatigué') || (tabMineur[i] == 'Trop fatigué')) {
+        nombMin++;
+    }
+}
+for (let i = 0; i < tabMajeur.length; i++) {
+    if ((tabMajeur[i] <= 35.4) || (tabMajeur[i] == 'oui')) {
+        nombMaj++;
+    }
+}
+showResult();
+}
+
+function showResult() {
+if (arr2[0] === 'oui' || (arr2[2] == 'oui' && arr2[4] == 'oui') || (arr2[2] == 'oui' && arr2[3] == 'oui')) {
+
+    if ((nombMaj >= 1) || ((nombPronos >= 1) && (nombMin >= 2))) {
+        textResult.firstElementChild.textContent = 'veuillez appeler le numéro 141';
+    } else if (((nombPronos >= 1) && (nombMaj == 0)) || (nombMin == 1)) {
+        textResult.firstElementChild.textContent = 'téléconsultation ou médecin généraliste ou visite à domicile1';
+    } else if ((nombPronos == 0) && (nombMaj == 0) && (nombMin == 0) && arr2[11] > 50) {
+        textResult.firstElementChild.textContent = 'téléconsultation ou médecin généraliste ou visite à domicile2';
+    } else if ((nombPronos == 0) && (nombMaj == 0) && (nombMin == 0) && arr2[11] < 50) {
+        textResult.firstElementChild.textContent = 'nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes.';
+    } else if ((arr2[11] <= 50) && (nombMin >= 1)) {
+        textResult.firstElementChild.textContent = 'nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes';
+    } 
+}else {
+    textResult.firstElementChild.textContent = 'Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil.';
+}
+} 
